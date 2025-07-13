@@ -1,0 +1,24 @@
+Resultado para as matrizes fornecidas (usando 4 processos):
+Metodo Paralelo:
+	Determinante de M: 1045.0
+	Tempo de execucao: 0.726732 segundos
+Metodo Sequencial:
+	Determinante de M: 1045.0
+	Tempo de execucao: 0.000000 segundos
+
+Resultado para as matrizes fornecidas (usando 4 processos):
+Metodo Paralelo:
+	Determinante de M: 68.00000000000003
+	Tempo de execucao: 0.666842 segundos
+Metodo Sequencial:
+	Determinante de M: 68.00000000000003
+	Tempo de execucao: 0.000000 segundos
+
+Resultado para as matrizes fornecidas (usando 4 processos):
+Metodo Paralelo:
+	Determinante de M: 176.0
+	Tempo de execucao: 0.660209 segundos
+Metodo Sequencial:
+	Determinante de M: 176.0
+	Tempo de execucao: 0.001000 segundos
+

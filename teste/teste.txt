@@ -1,0 +1,27 @@
+# Calcula o determinante da matriz
+def determinante(matrix):
+    n = matrix.shape[0]
+    if n == 1:
+        return matrix[0, 0]
+    if n == 2:
+        return matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0]
+    det = 0
+    for j in range(n):
+        det += ((-1) ** j) * matrix[0, j] * determinante(matriz_menor(matrix, 0, j))
+    return det
+
+# Calcula a inversa de uma matriz usando cofatores
+def matriz_inversa(matrix):
+    n = matrix.shape[0]
+    det = determinante(matrix)
+    if abs(det) < 1e-10: # Tolerância para zero
+        raise ValueError("Matriz nao inversivel")
+    cofator = np.zeros((n, n))
+    for i in range(n):
+        for j in range(n):
+            cofator[i, j] = ((-1) ** (i + j)) * determinante(matriz_menor(matrix, i, j))
+    return (1 / det) * cofator.T
+
+# Retorna a matriz menor removendo a linha i e coluna j
+def matriz_menor(matrix, i, j):
+    return np.delete(np.delete(matrix, i, axis = 0), j, axis = 1)
